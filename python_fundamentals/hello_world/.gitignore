@@ -1,0 +1,4 @@
+# Common standard names
+.venv/
+venv/
+env/
