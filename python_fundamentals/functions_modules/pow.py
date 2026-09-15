@@ -2,6 +2,6 @@
 
 def pow(a, b):
     result = 1
-    for _ in range(b):
-        result = result * a
-    return result
+    for _ in range(abs(b)):
+        result *= a
+    return 1 / result if b < 0 else result
