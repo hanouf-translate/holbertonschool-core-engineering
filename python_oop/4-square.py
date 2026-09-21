@@ -26,8 +26,8 @@ class Square:
 
     def set_size(self,size):
         """Sets the size attrubiute"""
-        self.__size = size
-        
+        self._size = size
+
     def get_size(self):
         """Returns the size attribute"""
-        return self.__size
+        return self._size
