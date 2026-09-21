@@ -24,7 +24,7 @@ class Rectangle:
         self.__width = width
         self.__height = height
 
-    def width(self, value):
+    def __set_width(self, value):
         """Sets the width attribute"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -37,7 +37,7 @@ class Rectangle:
         return self.__width
         
 
-    def height(self, value):
+    def __set_height(self, value):
         """Sets the height attrabute"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -49,5 +49,5 @@ class Rectangle:
         """Returns the height attribute"""
         return self.__height
 
-    height = property(height, height)
-    width = property(width, width)
+    height = property(height, __set_height)
+    width = property(width, __set_width)
