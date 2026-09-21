@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-1-square module
+4-square module
 
 This module defines a Square class with an Area method.
 """
@@ -23,3 +23,11 @@ class Square:
     def area(self):
         """calculated an area of a square"""
         return self.__size ** 2
+
+    def set_size(self,size):
+        """Sets the size attrubiute"""
+        self.__size = size
+        
+    def get_size(self):
+        """Returns the size attribute"""
+        return self.__size
