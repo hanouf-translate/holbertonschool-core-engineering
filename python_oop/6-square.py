@@ -52,7 +52,7 @@ class Square:
         else:
             for _ in range(self.__size):
                 print(" " * self.__position[0], end="")
-                print("#" * self.__size , end="")
+                print("#" * self.__size)
 
     def __str__(self):
         """Returns a string representation of the square."""
@@ -62,7 +62,7 @@ class Square:
             lines = []
             for _ in range(self.__size):
                 lines.append("#" * self.__size)
-            return "\n".join(lines) 
+            return "\n".join(lines)
 
     def  position(self, value):
         """Setter for __position with validation."""
