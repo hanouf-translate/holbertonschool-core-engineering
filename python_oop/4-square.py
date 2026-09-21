@@ -20,14 +20,20 @@ class Square:
             size (int): The size of the square.
         """
         self.__size = size
+
     def area(self):
         """calculated an area of a square"""
         return self.__size ** 2
 
     def set_size(self,size):
-        """Sets the size attrubiute"""
-        self._size = size
+        """Setter for __size with validation."""
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
 
     def get_size(self):
         """Returns the size attribute"""
-        return self._size
+        return self.__size
+    size = property(get_size, set_size)
