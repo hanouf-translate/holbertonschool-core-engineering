@@ -3,7 +3,7 @@
 Module square
 Defines a square class.
 """
-Rectangle = __import__('base_geometry').Rectangle
+Rectangle = __import__('2-rectangle').Rectangle
 
 class Square(Rectangle):
     """A square class."""
