@@ -9,7 +9,7 @@ class Square(Rectangle):
     """A square class."""
     def __init__(self, size):
 
-        self.vainteger_validator("size", size)
+        self.integer_validator("size", size)
         self.__size = size
         # super().__init__(size, size) 
     
