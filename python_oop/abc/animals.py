@@ -3,21 +3,23 @@
 classes. Python’s ABC package facilitates 
 the creation of abstract base classes. """
 
-from abs import ABC , abstractmethod
+from abc import ABC, abstractmethod
+
 
 class Animal(ABC):
     """Animal abstract class """
     @abstractmethod
     def sound(self):
         pass
-    
+
 
 class Dog(Animal):
     """Dog class """
     def sound(self):
         return "Bark"
 
+
 class Cat(Animal):
-     """Cat class """
+    """Cat class """
     def sound(self):
         return "Meow"
