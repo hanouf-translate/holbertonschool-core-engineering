@@ -21,11 +21,13 @@ class Circle(Shape):
     
     def area(self):
         # result = 3.14 * (self.radius ** 2)
-        return 3.14 * (self.radius ** 2)
+        pi = 3.141592653589793
+        return pi * (self.radius ** 2)
     
     def perimeter(self):
         # result =  2 * 3.14 * self.radius
-        return 2 * 3.14 * self.radius
+        pi = 3.141592653589793
+        return 2 * pi  * self.radius
 
 
 
