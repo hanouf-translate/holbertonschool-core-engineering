@@ -20,12 +20,12 @@ class Circle(Shape):
         self.radius = radius
     
     def area(self):
-        result = 3.14 * (self.radius ** 2)
-        return f"{result:.2f}"
+        # result = 3.14 * (self.radius ** 2)
+        return math.pi * (self.radius ** 2)
     
     def perimeter(self):
-        result =  2 * 3.14 * self.radius
-        return f"{result:.2f}"
+        # result =  2 * 3.14 * self.radius
+        return return 2 * math.pi * self.radius
 
 
 
