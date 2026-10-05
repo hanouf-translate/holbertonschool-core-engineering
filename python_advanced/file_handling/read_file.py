@@ -9,7 +9,7 @@ def read_file(filename=""):
         print(file_data)
 
 
-if __name__ == "__main__":
-    read_file = __import__('read_file').read_file
+# if __name__ == "__main__":
+#     read_file = __import__('read_file').read_file
 
-    read_file("my_file_0.txt")
+#     read_file("my_file_0.txt")
