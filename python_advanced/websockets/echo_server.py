@@ -11,7 +11,7 @@ async def connection_handler(websocket):
             print("Received:", message)
 
             await websocket.send(
-                f"Server received: {message}"
+                websocket.send(message)
             )
 
     except Exception as error:
