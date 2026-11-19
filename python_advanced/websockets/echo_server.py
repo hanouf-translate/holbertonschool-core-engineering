@@ -3,13 +3,26 @@
 import asyncio
 import websockets
 
-async def echo(websocket):
-    async for message in websocket:
-        await websocket.send(messag)
+async def connection_handler(websocket):
+    print("Client connected!")
+
+    try:
+        async for message in websocket:
+            print("Received:", message)
+
+            await websocket.send(
+                f"Server received: {message}"
+            )
+
+    except Exception as error:
+        print("Connection error:", error)
+
+    finally:
+        print("Client disconnected!")
 
 
 async def main():
-    async with websockets.serve(echo,'127.0.0.1', 8765):
+    async with websockets.serve(connection_handler,'127.0.0.1', 8765):
         await asyncio.Future()  # run forever
 
 
