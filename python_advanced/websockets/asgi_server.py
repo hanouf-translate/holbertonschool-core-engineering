@@ -12,8 +12,8 @@ async def websocket_endpoint(websocket):
     await websocket.accept()
     # message loop here
     async for message in websocket.iter_text():
-        await websocket.send_text(f"Message text was: {message}")
-    await websocket.close()
+        await websocket.send_text(f"{message}")
+    # await websocket.close()
 
 app = Starlette(routes=[
     Route("/", homepage),
