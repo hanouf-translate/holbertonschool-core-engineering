@@ -16,7 +16,7 @@ async def connection_handler(websocket):
                 await websocket.send("ERR: EMPTY")
                 continue
             else:
-                await websocket.send("OK: " + message)
+                await websocket.send(f"OK:{message}")
             print("Received:", message)
 
             await websocket.send(message)
