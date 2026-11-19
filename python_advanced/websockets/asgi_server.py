@@ -1,4 +1,4 @@
- #!/usr/bin/env python3
+#!/usr/bin/env python3
 
 from starlette.applications import Starlette
 from starlette.responses import HTMLResponse
