@@ -6,22 +6,22 @@ import websockets
 connected_clients = set()
 
 async def connection_handler(websocket):
-    connected_clients.add(websocket)
+    # connected_clients.add(websocket)
     print("Client connected!")
 
     try:
         async for message in websocket:
             print("Received:", message)
 
-            for client in connected_clients:
-                if client != websocket:
-                    await client.send(message)
+            await websocket.send(message)
+
+            
 
     except Exception as error:
         print("Connection error:", error)
 
     finally:
-        connected_clients.discard(websocket)
+        # connected_clients.discard(websocket)
         print("Client disconnected!")
 
 async def main():
