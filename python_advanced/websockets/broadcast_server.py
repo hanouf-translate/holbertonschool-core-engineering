@@ -21,7 +21,7 @@ async def connection_handler(websocket):
                 continue
             # response = f"U:{message}"
             # await websocket.send(response)
-            broadcast(connected_clients, f"U:{message}")
+            broadcast(connected_clients, f"B:{message}")
      
     except Exception as error:
         print("Connection error:", error)
