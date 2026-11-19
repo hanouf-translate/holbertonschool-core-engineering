@@ -5,7 +5,6 @@ import websockets
 from websockets.exceptions import ConnectionClosed, ConnectionClosedOK
 
 connected_clients = set()
-
 async def connection_handler(websocket):
     connected_clients.add(websocket)
     print("Client connected!")
@@ -15,16 +14,9 @@ async def connection_handler(websocket):
             if len(message.strip()) == 0:
                 await websocket.send("ERR:EMPTY")
                 continue
-            else:
-                for client in connected_clients:
-                    if client != websocket:
-                        await client.send(f"{id(websocket)}:{message}")
-                # await websocket.send(f"OK:{message}")
-            # print("Received:", message)
-            # await websocket.send(message)
-
-            
-
+            response = f"U:{message}"
+            await websocket.send(response)
+     
     except Exception as error:
         print("Connection error:", error)
 
