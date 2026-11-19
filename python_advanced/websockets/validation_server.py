@@ -13,7 +13,7 @@ async def connection_handler(websocket):
     try:
         async for message in websocket:
             if len(message.strip()) == 0:
-                await websocket.send("ERR: EMPTY")
+                await websocket.send("ERR:EMPTY")
                 continue
             else:
                 await websocket.send(f"OK:{message}")
